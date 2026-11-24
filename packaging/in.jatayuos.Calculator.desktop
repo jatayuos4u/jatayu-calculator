@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Jatayu Calculator
+Name[hi]=जटायु कैलकुलेटर
+Comment=Calculate and reuse previous results
+Comment[hi]=गणना करें और पिछले परिणाम फिर से इस्तेमाल करें
+Exec=jatayu-calculator
+Icon=jatayu-calculator
+Terminal=false
+Categories=Utility;Calculator;
+Keywords=arithmetic;math;percent;calculator;

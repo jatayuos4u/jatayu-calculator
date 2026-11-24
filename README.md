@@ -4,13 +4,19 @@ A native C++ and Qt 6 Widgets calculator for JatayuOS and Debian 13. The approve
 
 ## Install on JatayuOS
 
-Download the Debian installer and checksum from the [v1.1.1 release](https://github.com/jatayuos4u/jatayu-calculator/releases/tag/v1.1.1).
+**[Download Jatayu Calculator v1.1.1 (.deb, amd64)](https://github.com/jatayuos4u/jatayu-calculator/releases/download/v1.1.1/jatayu-calculator_1.1.1-2_amd64.deb)**
+
+[SHA-256 checksum](https://github.com/jatayuos4u/jatayu-calculator/releases/download/v1.1.1/SHA256SUMS) · [Release notes](https://github.com/jatayuos4u/jatayu-calculator/releases/tag/v1.1.1)
 
 ```sh
 sudo apt install ./jatayu-calculator_1.1.1-2_amd64.deb
 ```
 
 Open **Jatayu Calculator** from the application launcher. The language picker switches between English and Hindi. History is open by default and can be collapsed from the toolbar.
+
+## Screenshot
+
+![Jatayu Calculator in Standard mode with its History panel and Help menu](assets/screenshot.png)
 
 ## Use the calculator
 

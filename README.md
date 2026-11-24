@@ -3,7 +3,7 @@
 A native C++ and Qt 6 Widgets calculator for JatayuOS and Debian 13. The approved reference is in [assets/approved-design.png](assets/approved-design.png). The mode menu offers Standard, Scientific, and Converter in the charcoal and forest-green theme.
 
 ## Install on JatayuOS
- 
+
 Download the Debian installer and checksum from the [v1.1.1 release](https://github.com/jatayuos4u/jatayu-calculator/releases/tag/v1.1.1).
 
 ```sh
@@ -27,7 +27,7 @@ Open **Jatayu Calculator** from the application launcher. The language picker sw
 
 ## Help and credits
 
-Open **Help** on the toolbar or press **F1** for the offline guide. The menu also shows the app version, creator, and dependency credits in English or Hindi. The application license awaits the project owner's selection. The Boost license text is included in `packaging/BOOST-LICENSE.txt` and installed in the package's documentation directory. Qt is supplied by the system packages and their notices are in their respective documentation directories.
+Open **Help** on the toolbar or press **F1** for the offline guide. The menu also shows the app version, creator, and dependency credits in English or Hindi. Jatayu Calculator is licensed under the [MIT License](LICENSE). See [third-party notices](packaging/THIRD-PARTY-NOTICES.txt) for Qt and Boost. The Boost license text is included in `packaging/BOOST-LICENSE.txt` and installed in the package's documentation directory. Qt is supplied by the system packages and their notices are in their respective documentation directories.
 
 ## Build on Debian 13
 

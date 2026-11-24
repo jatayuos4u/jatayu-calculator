@@ -1,0 +1,17 @@
+Jatayu Calculator uses the following libraries.
+
+Qt 6 Core, Gui and Widgets
+The Debian 13 build dynamically links the Qt libraries distributed through
+Debian's system packages under LGPL-3.0. Their package copyright files are
+installed under /usr/share/doc in their respective package directories.
+The LGPL-3.0 and GPL-3.0 texts are in /usr/share/common-licenses on Debian.
+Debian's Qt source, including Debian patches:
+https://packages.debian.org/source/trixie/qt6-base
+If you need the exact source for an installed package, enable the matching
+Debian deb-src repositories and run:
+  apt source qt6-base="$(dpkg-query -W -f='${source:Version}' libqt6core6t64)"
+The application links shared Qt libraries through the system linker.
+
+Boost.Multiprecision
+The decimal arithmetic implementation uses headers supplied by Boost.
+See BOOST-LICENSE.txt for the Boost Software License 1.0.

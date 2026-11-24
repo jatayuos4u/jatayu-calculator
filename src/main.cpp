@@ -12,6 +12,7 @@
 #include <QComboBox>
 #include <QEvent>
 #include <QFontMetrics>
+#include <QFile>
 #include <QGridLayout>
 #include <QIcon>
 #include <QKeyEvent>
@@ -380,13 +381,17 @@ public:
                 + "\n" + localized("A desktop calculator for JatayuOS.", "जटायु ओएस के लिए डेस्कटॉप कैलकुलेटर।"), true);
         });
         creditsAction = helpMenu->addAction(QString(), this, [this] {
+            QFile license(QStringLiteral(":/licenses/LICENSE"));
+            const QString licenseText = license.open(QIODevice::ReadOnly)
+                ? QString::fromUtf8(license.readAll()) : QString();
             showInformation(localized("License & Credits", "लाइसेंस और आभार"), localized(
-                "Jatayu Calculator\nApplication license pending selection by the project owner.\n\n"
-                "Credits\nQt Widgets and Qt Core provide the desktop interface and application services. "
-                "Boost.Multiprecision provides decimal arithmetic. Thanks to the Qt and Boost contributors.",
-                "जटायु कैलकुलेटर\nऐप का लाइसेंस परियोजना के स्वामी द्वारा तय किया जाना बाकी है।\n\n"
-                "आभार\nडेस्कटॉप इंटरफ़ेस और ऐप की सेवाओं के लिए Qt Widgets और Qt Core का उपयोग किया गया है। "
-                "दशमलव गणना के लिए Boost.Multiprecision का उपयोग किया गया है। Qt और Boost के योगदानकर्ताओं का धन्यवाद।"));
+                "Jatayu Calculator\nMIT License · Copyright (c) 2026 Anup Kumar Yadav\n\n"
+                "Credits\nQt 6 is provided by the system under LGPL-3.0. "
+                "Boost.Multiprecision provides decimal arithmetic under the Boost Software License 1.0.",
+                "जटायु कैलकुलेटर\nMIT लाइसेंस · कॉपीराइट (c) 2026 अनुप कुमार यादव\n\n"
+                "आभार\nQt 6 सिस्टम से LGPL-3.0 लाइसेंस के तहत मिलता है। "
+                "दशमलव गणना के लिए Boost.Multiprecision का उपयोग Boost Software License 1.0 के तहत किया गया है।")
+                + "\n\n" + licenseText);
         });
         helpMenuButton->setMenu(helpMenu);
         tools->addWidget(helpMenuButton);
